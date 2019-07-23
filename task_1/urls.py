@@ -20,5 +20,11 @@ from flights import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('flights/', views.FlightsList.as_view(), name="flights-list"),
-    path('bookings/', views.BookingsList.as_view(), name="bookings-list"), 
+    path('bookings/', views.BookingsList.as_view(), name="bookings-list"),
+    path('Details/<int:x>/', views.DetailBooking.as_view(), name="booking-details"),
+    path('Update/<int:x>/', views.UpdateView.as_view(), name="update-booking"),
+    path('Delete/<int:x>/', views.DeleteView.as_view(), name="cancel-booking"),
+
+
+
 ]
